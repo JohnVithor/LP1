@@ -1,0 +1,29 @@
+-- No inicio do programa, antes de alguma função ser chamada, as variaveis armazenam os seguintes valores:
+	arg1 = 11
+	arg2 = 23
+
+-- Na linha 31 após a função funcX(), as variaveis armazenam:
+	arg1 = 11
+	arg2 = 23
+Pois o cabeçalho da função funcX() é:
+	int funcX (int a, int b)
+Seus parâmetros são dois inteiros, as variáveis a e b armazenam uma cópia dos valores de arg1 e arg2, respectivamente, portanto após o termino da função funcX() os valores de arg1 e arg2 permanecem os mesmos.
+
+-- Na linha 32 após a função funcY(), as variaveis armazenam:
+	arg1 = 11
+	arg2 = 23
+Pois o cabeçalho da função funcY() é:
+	int funcY (int* a, int b)
+Seu primeiro parâmetro é um ponteiro de inteiro e o segundo um inteiro, a variável a armazena o endereço de arg1 e b armazena uma cópia de arg2.
+
+Dentro de funcY() é criado um ponteiro y que é alocado dinamicamente e o conteudo apontado por y recebe o conteudo apontado por a (no caso o valor de arg1), como as outras operações envolvem apenas y (criado dentro da função ) e b (uma copia de arg2), os valores de arg1 e arg2 não são alterados ao fim da função.
+
+-- Na linha 34 após a função funcZ(), as variaveis armazenam:
+	arg1 = 11
+	arg2 = 23
+Pois o cabeçalho da função funcY() é:
+	void funcZ (int a, int b, int* result)
+Seus primeiros dois parâmetros são inteiros e o terceiro um ponteiro de inteiro, como os valores de a e de b armazemam copias dos valores de arg1 e arg2, os valores de arg1 e arg2 não são alterados, apenas o valor de de resultado que foi alterado.
+
+Dentro de funcY() é criado um ponteiro y que é alocado dinamicamente e o conteudo apontado por y recebe o conteudo apontado por a (no caso o valor de arg1), como as outras operações envolvem apenas y (criado dentro da função ) e b (uma copia de arg2), os valores de arg1 e arg2 não são alterados ao fim da função.
+

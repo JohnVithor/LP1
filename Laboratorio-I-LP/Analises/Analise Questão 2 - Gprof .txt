@@ -1,0 +1,1 @@
+A função mais chamada no programa anterior foi a função eh_primo() onde o numero de chamadas irá depender do numero de entrada. Por exemplo para a entrada 14 a função eh_primo() será chamada 147629, porém seu tempo de execução é muito pequeno e o gprof não mostra um valor.
